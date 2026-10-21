@@ -1,23 +1,131 @@
 aid: monkedo
+
 name: Z Yazilim
-description: 'Z Yazilim is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cloud-1de12d.becdn.net/media/iW=1200&iH=630/38edc3a3a16b74f04f2c75e172e86400.jpg
+
+description: Z Yazilim, operating under the brand Monkedo, provides a no-code automation platform that enables users to build workflows, integrate
+  apps, and automate business processes without writing code. The platform offers embedded iPaaS capabilities, a library of templates, and extensive
+  documentation to help users get started quickly. Monkedo targets businesses seeking alternatives to Zapier, Make, and Power Automate, emphasizing
+  ease of use and flexibility across various integrations.
+
 url: https://raw.githubusercontent.com/api-evangelist/monkedo/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- Automation
+- No-Code
+- Integration
+- Workflow
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/monkedo-plans-pricing.yml
+- type: Spectral
+  url: rules/monkedo-rules.yml
+- type: JSONLD
+  url: json-ld/monkedo-context.jsonld
+- type: Vocabulary
+  url: vocabulary/monkedo-vocabulary.yml
+- type: DataModel
+  url: data-model/monkedo-data-model.yml
+- type: Authentication
+  url: authentication/monkedo-authentication.yml
+- type: Conformance
+  url: conformance/monkedo-conformance.yml
+- type: LLMsTxt
+  url: llms/monkedo-llms.txt
+- type: Hosts
+  url: hosts/monkedo-hosts.yml
+- type: Vendors
+  url: vendors/monkedo-vendors.yml
+- type: Security
+  url: https://monkedo.com/integrations/security
+- type: Newsroom
+  url: https://monkedo.com/integrations/media
+- type: DomainSecurity
+  url: security/monkedo-domain-security.yml
 - type: Website
   url: https://monkedo.com/
+- type: Documentation
+  url: https://monkedo.com/docs
+- type: GettingStarted
+  url: https://monkedo.com/docs/what-is-monkedo
+- type: Support
+  url: https://monkedo.com/contact.html
+- type: Blog
+  url: https://monkedo.com/blog
+- type: Pricing
+  url: https://monkedo.com/pricing
+- type: SignUp
+  url: https://monkedo.com/
+- type: TermsOfService
+  url: https://monkedo.com/terms.html
+- type: PrivacyPolicy
+  url: https://monkedo.com/privacy.html
+- type: Postman
+  url: https://www.postman.com/monkedo/workspace/monkedo-api
+
+apis:
+- name: Monkedo API
+  description: Monkedo provides a no-code automation platform with an API for managing workflows and integrations.
+  humanURL: https://monkedo.com/docs
+  baseURL: null
+  aid: monkedo:monkedo-api-2
+- aid: monkedo:monkedo-api
+  name: Z Yazilim API
+  description: 'Z Yazilim API as documented publicly: 7 operations. Contract generated from the documentation by API Evangelist (2026-10-21);
+
+    not the provider''s own document.'
+  humanURL: https://monkedo.com/docs/api-keys/api
+  baseURL: https://app.monkedo.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/monkedo-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/monkedo-post-api-api-keys-input-options-request-schema.json
+  - type: JSONSchema
+    url: json-schema/monkedo-post-api-v1-components-triggers-request-schema.json
+  - type: JSONSchema
+    url: json-schema/monkedo-get-api-v1-components-triggers-response-schema.json
+  - type: JSONSchema
+    url: json-schema/monkedo-post-api-v1-files-upload-link-response-schema.json
+  - type: JSONSchema
+    url: json-schema/monkedo-post-api-api-keys-input-options-response-schema.json
+  - type: JSONSchema
+    url: json-schema/monkedo-get-api-v1-components-apps-response-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The provider's website returns HTML pages for typical spec URLs (e.g., /swagger.yaml) instead of a machine‑readable OpenAPI document.
+  evidence:
+  - url: https://monkedo.com/swagger.yaml
+    status: 200
+  checked: '2026-10-21'
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 25
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

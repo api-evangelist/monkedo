@@ -1,0 +1,20 @@
+generated: '2026-10-21'
+method: probed
+source: https://monkedo.com/privacy.html
+signals:
+  data_subject_request:
+    evidence:
+      - source: https://monkedo.com/privacy.html
+        http_status: 200
+        fetched: "true"
+        quote: "Users can request deletion of data via support@monkedo.com ."
+        section: Privacy Policy
+    note: Provides a mechanism for data deletion requests.
+  subprocessors:
+    evidence:
+      - source: https://monkedo.com/privacy.html
+        http_status: 200
+        fetched: "true"
+        quote: "Monkedo reserves the right to transfer data pertaining to these purposes to any servers (owned by Monkedo, its affiliates, or subcontractors) located worldwide."
+        section: Privacy Policy
+    note: Indicates use of affiliates/subcontractors for data processing.

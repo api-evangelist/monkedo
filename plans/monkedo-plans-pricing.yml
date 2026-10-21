@@ -1,0 +1,29 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://monkedo.com/pricing
+sources:
+- https://monkedo.com/pricing
+name: Z Yazilim pricing
+audience: business-product
+pricing_basis: per-seat
+plans:
+- name: Freemium
+  price_text: $0
+  price: 0
+- name: 5K Plan
+  price_text: $10
+  price: 10
+- name: 10K Plan
+  price_text: $16
+  price: 16
+- name: 25K Plan
+  price_text: $36
+  price: 36
+- name: 50K Plan
+  price_text: $65
+  price: 65
+- name: 100K Plan
+  price_text: $120
+  price: 120
+docs: https://monkedo.com/pricing

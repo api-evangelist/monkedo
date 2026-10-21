@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/monkedo/main/json-schema/monkedo-post-api-api-keys-input-options-request-schema.json",
+  "title": "PostApiApiKeysInputOptionsRequest",
+  "x-generated": "2026-10-21",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/monkedo-openapi-generated.yml#/components/schemas/PostApiApiKeysInputOptionsRequest",
+  "type": "object",
+  "properties": {
+    "componentId": {
+      "type": "string",
+      "description": "Component id — e.g. action.cubicl.get-tasks"
+    },
+    "inputName": {
+      "type": "string",
+      "description": "Input whose options you want — e.g. group"
+    },
+    "inputs": {
+      "type": "object",
+      "description": "Values of inputs that appear before inputName in the component form"
+    },
+    "search": {
+      "type": "string",
+      "description": "Filter text for searchable option lists"
+    }
+  },
+  "required": [
+    "componentId",
+    "inputName"
+  ]
+}

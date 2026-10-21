@@ -1,0 +1,56 @@
+# Monkedo Documentation
+
+This file provides a list of access to the documentation's markdown version for LLM agents.
+
+Getting Set Up: https://monkedo.com/docs/getting-set-up.md
+Query: https://monkedo.com/docs/working-with-data/types/query.md
+Editor: https://monkedo.com/docs/product-guides/elements-of-automation/editor.md
+Errors and Solutions: https://monkedo.com/docs/product-guides/design-automation/errors.md
+Deploying Automations: https://monkedo.com/docs/first-automation/deploy-automation.md
+Custom Clients: https://monkedo.com/docs/product-guides/custom-clients.md
+API: https://monkedo.com/docs/embedded-ipaas/api.md
+API: https://monkedo.com/docs/api-keys/api.md
+Structure: https://monkedo.com/docs/api-keys/structure.md
+Introduction: https://monkedo.com/docs/api-keys/introduction.md
+Component Grouping in Editor: https://monkedo.com/docs/product-guides/elements-of-automation/automation-group.md
+Introduction to Embedded iPaaS: https://monkedo.com/docs/embedded-ipaas/introduction.md
+👋 What is Monkedo?: https://monkedo.com/docs/what-is-monkedo.md
+🟡 Credit System: https://monkedo.com/docs/credit.md
+Automations: https://monkedo.com/docs/product-guides/design-automation/automations.md
+Flow Types: https://monkedo.com/docs/product-guides/design-automation/flow-types.md
+Browser Extention: https://monkedo.com/docs/product-guides/browser-extention.md
+Data Tables: https://monkedo.com/docs/product-guides/data-tables.md
+Node: https://monkedo.com/docs/product-guides/elements-of-automation/node.md
+Connection: https://monkedo.com/docs/product-guides/elements-of-automation/connection.md
+Component: https://monkedo.com/docs/product-guides/elements-of-automation/component.md
+Structure: https://monkedo.com/docs/embedded-ipaas/structure.md
+Connected Accounts: https://monkedo.com/docs/product-guides/connected-accounts.md
+Automation Templates: https://monkedo.com/docs/product-guides/templates.md
+Value Store: https://monkedo.com/docs/product-guides/value-store.md
+Zoho Integrations: https://monkedo.com/docs/apps/zoho-integrations.md
+Importing Data: https://monkedo.com/docs/working-with-data/data-processing/importing-data.md
+Introduction: https://monkedo.com/docs/working-with-data/data-processing/introduction.md
+Table: https://monkedo.com/docs/working-with-data/types/table.md
+Entity: https://monkedo.com/docs/working-with-data/types/entity.md
+List: https://monkedo.com/docs/working-with-data/types/list.md
+File: https://monkedo.com/docs/working-with-data/types/file.md
+Introduction: https://monkedo.com/docs/working-with-data/introduction.md
+Date and Time: https://monkedo.com/docs/working-with-data/types/date-time.md
+Text: https://monkedo.com/docs/working-with-data/types/text.md
+Yes/No: https://monkedo.com/docs/working-with-data/types/yes-no.md
+Expressions: https://monkedo.com/docs/first-automation/expressions.md
+Working With Data: https://monkedo.com/docs/first-automation/working-with-data.md
+Conditions: https://monkedo.com/docs/first-automation/conditions.md
+Automations: https://monkedo.com/docs/first-automation/automations.md
+Actions: https://monkedo.com/docs/first-automation/actions.md
+Planning: https://monkedo.com/docs/first-automation/planning.md
+Components: https://monkedo.com/docs/first-automation/components.md
+Number: https://monkedo.com/docs/working-with-data/types/number.md
+Automation Flow: https://monkedo.com/docs/first-automation/automation-flow.md
+Named Values: https://monkedo.com/docs/first-automation/named-values.md
+Iterators: https://monkedo.com/docs/first-automation/iterators.md
+Connections: https://monkedo.com/docs/first-automation/connections.md
+Triggers: https://monkedo.com/docs/first-automation/triggers.md
+👨🏼‍💻 For IT Professionals: https://monkedo.com/docs/use-cases/it-professionals.md
+👩🏽‍💼 For Office People: https://monkedo.com/docs/use-cases/office-people.md
+👩‍💻 For Developers: https://monkedo.com/docs/use-cases/developers.md

@@ -1,0 +1,293 @@
+openapi: 3.1.0
+info:
+  title: Z Yazilim API
+  version: '2026-10-21'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-21: 7 operation(s) read from 1 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Z Yazilim has published no machine-readable contract that the
+    pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 2
+    documentation: 5
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-21'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://monkedo.com/docs/api-keys/api
+servers:
+- url: https://app.monkedo.com
+paths:
+  /api/api-keys/input-options:
+    post:
+      operationId: post_api_api_keys_input_options
+      tags:
+      - Api
+      summary: Load the option list for a component input whose choices depend on other inputs.
+      x-source: https://monkedo.com/docs/api-keys/api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiApiKeysInputOptionsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiApiKeysInputOptionsResponse'
+      x-evidence:
+        kind: documentation
+  /api/v1/components/apps:
+    get:
+      operationId: get_api_v1_components_apps
+      tags:
+      - Api
+      summary: List apps this key can use.
+      x-source: https://monkedo.com/docs/api-keys/api
+      parameters:
+      - name: onlyEnabled
+        in: query
+        required: false
+        schema:
+          type: boolean
+        description: When true, only apps enabled on this key. When false, the full catalog (including built-in Email).
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV1ComponentsAppsResponse'
+      x-evidence:
+        kind: documentation
+  /api/v1/components/list:
+    get:
+      operationId: get_api_v1_components_list
+      tags:
+      - Api
+      summary: GET /api/v1/components/list
+      x-source: https://monkedo.com/docs/api-keys/api
+      parameters:
+      - name: appKey
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -H "Authorization: Bearer YOUR_API_KEY"  "https://app.monkedo.com/api/v1/components/list?appKey=email" '
+  /api/v1/components/triggers:
+    get:
+      operationId: get_api_v1_components_triggers
+      tags:
+      - Api
+      summary: List Registered Triggers.
+      x-source: https://monkedo.com/docs/api-keys/api
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV1ComponentsTriggersResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_api_v1_components_triggers
+      tags:
+      - Api
+      summary: Register a trigger.
+      x-source: https://monkedo.com/docs/api-keys/api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV1ComponentsTriggersRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV1ComponentsTriggersResponse'
+      x-evidence:
+        kind: documentation
+  /api/v1/files/upload-link:
+    post:
+      operationId: post_api_v1_files_upload_link
+      tags:
+      - Api
+      summary: Reserve a file and get a presigned upload URL.
+      x-source: https://monkedo.com/docs/api-keys/api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV1FilesUploadLinkRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV1FilesUploadLinkResponse'
+      x-evidence:
+        kind: documentation
+  /listen:
+    post:
+      operationId: post_listen
+      tags:
+      - Listen
+      summary: POST /listen
+      x-source: https://monkedo.com/docs/api-keys/api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostListenRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST  -H \"Authorization: Bearer YOUR_API_KEY\"  -H \"Content-Type: application/json\"  -d '{ \n \"componentKey\" :\
+          \ \"trigger.cubicl.task-created\" , \n \"webhookUrl\" : \"https://hooks.example.com/listen\" , \n \"inputs\" : { \"group\" : \"GROUP_ID\"\
+          \ } \n }'  https: //app.monkedo.com/api/v1/components/triggers Previous Structure Next Editor"
+components:
+  schemas:
+    PostApiApiKeysInputOptionsRequest:
+      type: object
+      properties:
+        componentId:
+          type: string
+          description: Component id — e.g. action.cubicl.get-tasks
+        inputName:
+          type: string
+          description: Input whose options you want — e.g. group
+        inputs:
+          type: object
+          description: Values of inputs that appear before inputName in the component form
+        search:
+          type: string
+          description: Filter text for searchable option lists
+      required:
+      - componentId
+      - inputName
+    PostApiApiKeysInputOptionsResponse:
+      type: object
+      properties:
+        value:
+          type: string
+          description: Option value.
+        label:
+          type: string
+          description: Option label.
+        desc:
+          type: string
+          description: Option description.
+    GetApiV1ComponentsAppsResponse:
+      type: object
+      properties:
+        name:
+          type: string
+          description: App name.
+        icon:
+          type: string
+          description: Icon filename.
+        key:
+          type: string
+          description: App key.
+    GetApiV1ComponentsTriggersResponse:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Trigger record id.
+        componentId:
+          type: string
+          description: Trigger component id.
+        inputs:
+          type: object
+          description: Trigger inputs.
+        createdAt:
+          type: string
+          description: Creation timestamp.
+        webhookUrl:
+          type: string
+          description: Webhook URL for events.
+    PostApiV1ComponentsTriggersRequest:
+      type: object
+      properties:
+        componentKey:
+          type: string
+          description: Trigger component id — e.g. trigger.cubicl.task-archived or trigger.email
+        webhookUrl:
+          type: string
+          description: Absolute public HTTP(S) URL. Localhost and private IPs are rejected.
+        inputs:
+          type: object
+          description: Trigger register parameters (varies by component).
+      required:
+      - componentKey
+      - webhookUrl
+    PostApiV1ComponentsTriggersResponse:
+      type: object
+      properties:
+        triggerId:
+          type: string
+          description: Created trigger identifier.
+    PostApiV1FilesUploadLinkRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          description: File name including extension. Cannot contain /, \, or :.
+      required:
+      - name
+    PostApiV1FilesUploadLinkResponse:
+      type: object
+      properties:
+        fileId:
+          type: string
+          description: Reserved file identifier.
+        s3Name:
+          type: string
+          description: S3 object name.
+        uploadUrl:
+          type: string
+          description: Presigned URL for uploading the file.
+    PostListenRequest:
+      type: object
+      properties:
+        componentKey:
+          type: string
+        webhookUrl:
+          type: string
+        inputs:
+          type: object
+          properties:
+            group:
+              type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+security:
+- bearer: []
+tags:
+- name: Api
+- name: Listen

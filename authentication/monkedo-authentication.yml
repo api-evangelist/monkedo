@@ -1,0 +1,18 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://monkedo.com/docs/api-keys/introduction
+sources:
+- https://monkedo.com/docs/api-keys/introduction
+- https://monkedo.com/docs/api-keys/structure
+- https://monkedo.com/docs/api-keys/api
+description: Authentication schemes for Monkedo API
+schemes:
+- type: http-bearer
+  name: API Key
+  evidence: 'Every request requires a valid API key in the Authorization header: Authorization : Bearer YOUR_API_KEY'
+  location: header
+  header: Authorization
+  how_to_obtain: Create API key in the Monkedo dashboard (Keys page) and copy the secret token.
+note: No OAuth2, apiKey, or other authentication methods are documented.
+docs: https://monkedo.com/docs/api-keys/introduction

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/monkedo/main/json-schema/monkedo-post-api-v1-files-upload-link-response-schema.json",
+  "title": "PostApiV1FilesUploadLinkResponse",
+  "x-generated": "2026-10-21",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/monkedo-openapi-generated.yml#/components/schemas/PostApiV1FilesUploadLinkResponse",
+  "type": "object",
+  "properties": {
+    "fileId": {
+      "type": "string",
+      "description": "Reserved file identifier."
+    },
+    "s3Name": {
+      "type": "string",
+      "description": "S3 object name."
+    },
+    "uploadUrl": {
+      "type": "string",
+      "description": "Presigned URL for uploading the file."
+    }
+  }
+}
